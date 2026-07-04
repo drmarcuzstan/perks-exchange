@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply for a Trade Finance Facility | Raffles FinTech Limited</title>
+<meta name="description" content="Apply for a supply chain trade finance facility with Raffles FinTech Limited.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-name">Raffles FinTech Limited</span>
+      <span class="brand-tag">Supply Chain Trade Finance Solutions</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="what-we-do.html">What We Do</a>
+      <a href="people.html">People</a>
+      <a href="panel.html">Panel</a>
+      <a href="contact.html">Contact</a>
+      <a href="apply.html" class="nav-cta active">Apply Now</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <h1>Apply for a Trade Finance Facility</h1>
+  <p>Tell us about your business and funding needs &mdash; our AIDA framework will match you
+    with the right facility and institutional partner.</p>
+</section>
+
+<section class="block">
+  <form id="apply-form">
+    <div class="form-row">
+      <label for="company-name">Company Name</label>
+      <input type="text" id="company-name" name="company-name" required>
+    </div>
+    <div class="form-row">
+      <label for="contact-name">Contact Person</label>
+      <input type="text" id="contact-name" name="contact-name" required>
+    </div>
+    <div class="form-row">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-row">
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone">
+    </div>
+    <div class="form-row">
+      <label for="country">Country of Operation</label>
+      <input type="text" id="country" name="country" placeholder="e.g. Singapore, Vietnam, China">
+    </div>
+    <div class="form-row">
+      <label for="facility-type">Facility Type</label>
+      <select id="facility-type" name="facility-type" required>
+        <option value="">Select a facility type</option>
+        <option value="revolving-credit">AIDA Revolving Credit</option>
+        <option value="advisory-arrangement">Trade Finance Advisory &amp; Arrangement</option>
+        <option value="asset-backed">Asset-Backed Funding</option>
+        <option value="unsure">Not sure &mdash; please advise</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label for="amount">Indicative Funding Amount (USD)</label>
+      <input type="text" id="amount" name="amount" placeholder="e.g. 500,000">
+    </div>
+    <div class="form-row">
+      <label for="details">Tell us about your funding needs</label>
+      <textarea id="details" name="details" placeholder="Sales orders, receivables, or assets you'd like to fund" required></textarea>
+    </div>
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">Submit Application</button>
+    </div>
+    <p id="apply-status" style="text-align:center; margin-top:16px; display:none; color:var(--navy); font-weight:600;">
+      Thank you for your application &mdash; a member of our team will follow up shortly.
+    </p>
+  </form>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Raffles FinTech Limited</div>
+      <p>Incorporated in Hong Kong &bull; CI: 70085377</p>
+      <p>8 Queen's Road East, Hong Kong</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="what-we-do.html">What We Do</a>
+      <a href="people.html">People</a>
+      <a href="panel.html">Panel</a>
+      <a href="contact.html">Contact</a>
+      <a href="apply.html">Apply for Facility</a>
+    </nav>
+  </div>
+  <div class="footer-bottom container">&copy; 2026 Raffles FinTech Limited. All rights reserved.</div>
+</footer>
+
+<script src="nav.js"></script>
+<script>
+  document.getElementById('apply-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    this.reset();
+    document.getElementById('apply-status').style.display = 'block';
+  });
+</script>
+</body>
+</html>
